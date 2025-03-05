@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Transformations = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-purple-600 to-indigo-900 p-10 gap-10">
+    <div className="flex flex-col items-center justify-center h-full w-fullbg-gradient-to-br from-purple-600 to-indigo-900 p-10 gap-10">
       {/* Skew Animation */}
       <motion.div
         className="w-52 h-20 flex items-center justify-center bg-white text-black text-xl font-bold rounded-xl shadow-lg"
