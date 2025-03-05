@@ -4,38 +4,36 @@ import { useState } from "react";
 const FlippingCard = () => {
   const [isFlipped, setIsFlipped] = useState(false);
 
-  const cardVariants = {
-    front: { rotateY: 0 },
-    back: { rotateY: 180 },
-  };
-
   return (
-    <div className="h-screen w-screen flex justify-center items-center bg-gray-600">
-      <div className="relative w-[300px] h-[400px]">
+    <div className="flex justify-center items-center ">
+      <div className="relative w-[300px] h-[400px] perspective-1000">
         <motion.div
-          className="w-full h-full absolute"
-          variants={cardVariants}
-          animate={isFlipped ? "back" : "front"}
+          className="w-full h-full relative"
+          animate={{ rotateY: isFlipped ? 180 : 0 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          style={{
+            transformStyle: "preserve-3d",
+            cursor: "pointer",
+          }}
           onClick={() => setIsFlipped(!isFlipped)}
-          style={{ transformStyle: "preserve-3d", cursor: "pointer" }}
         >
           {/* Front Side */}
           <div
-            className="w-full h-full bg-blue-500 flex justify-center items-center"
+            className="absolute w-full h-full bg-blue-500 flex justify-center items-center rounded-lg shadow-xl"
             style={{ backfaceVisibility: "hidden" }}
           >
-            <h2 className="text-white text-2xl">Front Side</h2>
+            <h2 className="text-white text-2xl font-semibold">Front Side</h2>
           </div>
 
           {/* Back Side */}
           <div
-            className="w-full h-full bg-green-500 flex justify-center items-center"
+            className="absolute w-full h-full bg-green-500 flex justify-center items-center rounded-lg shadow-xl"
             style={{
               backfaceVisibility: "hidden",
               transform: "rotateY(180deg)",
             }}
           >
-            <h2 className="text-white text-2xl">Back Side</h2>
+            <h2 className="text-white text-2xl font-semibold">Back Side</h2>
           </div>
         </motion.div>
       </div>

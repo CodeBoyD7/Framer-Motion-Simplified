@@ -5,7 +5,7 @@ const Variants = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <div className="h-screen w-screen flex flex-col items-center bg-[#0a0a0a] p-6">
+    <div className=" flex flex-col items-center bg-[#0a0a0a] p-6">
       {/* Header Section */}
       <div className="flex flex-col items-center justify-center text-center bg-[#121212] p-8 rounded-xl shadow-lg border border-gray-800">
         <h1 className="text-5xl font-extrabold bg-gradient-to-r from-green-400 to-yellow-400 bg-clip-text text-transparent">

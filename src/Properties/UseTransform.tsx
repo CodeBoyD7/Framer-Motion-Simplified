@@ -7,7 +7,7 @@ const UseTransform = () => {
   const rotate = useTransform(x, [-100, 100], outputRange);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-[#0a0a0a] py-12">
+    <div className=" flex flex-col items-center justify-center bg-[#0a0a0a] py-12">
       {/* Title and Description */}
       <div className="text-center mb-12 px-6">
         <h1 className="text-5xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">

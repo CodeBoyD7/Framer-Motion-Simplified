@@ -25,7 +25,7 @@ const StaggerAnimation = () => {
   ];
 
   return (
-    <div className="min-h-screen w-full bg-[#0a0a0a] flex flex-col items-center py-12">
+    <div className=" bg-[#0a0a0a] flex flex-col items-center py-12">
       {/* Heading Section */}
       <div className="text-center mb-12 px-6">
         <h1 className="text-5xl font-extrabold bg-gradient-to-r from-green-400 to-yellow-400 bg-clip-text text-transparent">

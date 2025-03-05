@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const ExpandingCircle = () => {
   return (
-    <div className="flex justify-center items-center h-[100%] w-[100%] bg-gray-900">
+    <div className="flex justify-center items-center  ">
       <motion.div
         className="w-10 h-10 bg-blue-500 rounded-full"
         animate={{
