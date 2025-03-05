@@ -5,6 +5,11 @@ import {
   Route,
   useNavigate,
 } from "react-router-dom";
+import { FC } from "react";
+
+interface ComponentWrapperProps {
+  component: React.ElementType;
+}
 
 import AddToCartButton from "./components/AddToCartButton";
 import AnimateCard from "./components/AnimateCard";
@@ -35,7 +40,9 @@ import UseTransform from "./Properties/UseTransform";
 import Varients from "./Properties/Varients";
 import UseScrollTopProgress from "./components/UseScrollTopProgress";
 
-const ComponentWrapper = ({ component: Component }) => {
+const ComponentWrapper: FC<ComponentWrapperProps> = ({
+  component: Component,
+}) => {
   const navigate = useNavigate();
   const goBack = () => navigate(-1);
 
@@ -51,7 +58,6 @@ const ComponentWrapper = ({ component: Component }) => {
     </div>
   );
 };
-
 const components = [
   { path: "add-to-cart", name: "Add to Cart", component: AddToCartButton },
   { path: "animate-card", name: "Animate Card", component: AnimateCard },
