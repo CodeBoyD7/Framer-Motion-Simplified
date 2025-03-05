@@ -5,7 +5,7 @@ import {
   Route,
   useNavigate,
 } from "react-router-dom";
-import React from "react";
+
 import AddToCartButton from "./components/AddToCartButton";
 import AnimateCard from "./components/AnimateCard";
 import AnimationScroll from "./components/AnimationScroll";
